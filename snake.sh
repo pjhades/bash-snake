@@ -35,7 +35,7 @@ move_c=([0]=0 [1]=1 [2]=0 [3]=-1)
 init_game() {
     clear
     echo -ne "\033[?25l"
-	stty -echo
+    stty -echo
     for ((i=0; i<height; i++)); do
         for ((j=0; j<width; j++)); do
             eval "arr$i[$j]=' '"
@@ -198,7 +198,7 @@ getchar() {
         read -s -n 1 key
         case "$key" in
             [qQ]) kill -$SIG_QUIT $game_pid
-				  return
+                  return
                   ;;
             [kK]) kill -$SIG_UP $game_pid
                   ;;
@@ -237,8 +237,8 @@ game_loop() {
 }
 
 clear_game() {
-	stty echo
-	echo -e "\033[?25h"
+    stty echo
+    echo -e "\033[?25h"
 }
 
 init_game
