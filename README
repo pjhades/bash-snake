@@ -25,9 +25,9 @@ Something to Say
 
         @
         oooo
-		   o
+           o
 
-		will have a $body with value '21112', meaning 'down,right,right,right,down'
+        will have a $body with value '21112', meaning 'down,right,right,right,down'
 
 
  * Use $! to grasp the PID of the latest created background process.
