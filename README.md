@@ -1,9 +1,6 @@
 About
 ---------------
-Almisael is a simple Snake game written in Bash, named
-after the 16-th angel from Evangelion, which has no stable
-shape and mainly looks like a luminous ribbon similar to 
-a snake.
+A simple snake game written in Bash.
 
 
 How to Play
@@ -28,7 +25,6 @@ Something to Say
            o
 
    will have a $body with value '21112', meaning 'down,right,right,right,down'
-
 
  * Use $! to grasp the PID of the latest created background process.
 
