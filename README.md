@@ -10,7 +10,7 @@ Quit: q
 Accept both upper- and lower-case.
 
 
-Key Points
+Some Implementation Details
 ---------------
  * Bash-snake has two processes, the foreground one responds to 
    user's control commands, the background one draws the board.
