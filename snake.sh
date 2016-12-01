@@ -2,7 +2,7 @@
 
 IFS=''
 
-declare -i height=30 width=60
+declare -i height=$(($(tput lines)-5)) width=$(($(tput cols)-2))
 
 # row and column number of head
 declare -i head_r head_c tail_r tail_c
