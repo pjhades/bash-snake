@@ -14,19 +14,19 @@ declare body
 declare -i direction delta_dir
 declare -i score=0
 
-border_color="\E[30;43m"
-snake_color="\E[32;42m"
-food_color="\E[34;44m"
-text_color="\E[31;43m"
-no_color="\E[0m"
+border_color="\e[30;43m"
+snake_color="\e[32;42m"
+food_color="\e[34;44m"
+text_color="\e[31;43m"
+no_color="\e[0m"
 
 # signals
-SIG_UP=35
-SIG_RIGHT=36
-SIG_DOWN=37
-SIG_LEFT=38
-SIG_QUIT=39
-SIG_DEAD=40
+SIG_UP=USR1
+SIG_RIGHT=USR2
+SIG_DOWN=URG
+SIG_LEFT=IO
+SIG_QUIT=WINCH
+SIG_DEAD=HUP
 
 # direction arrays: 0=up, 1=right, 2=down, 3=left
 move_r=([0]=-1 [1]=0 [2]=1 [3]=0)
@@ -34,7 +34,7 @@ move_c=([0]=0 [1]=1 [2]=0 [3]=-1)
 
 init_game() {
     clear
-    echo -ne "\033[?25l"
+    echo -ne "\e[?25l"
     stty -echo
     for ((i=0; i<height; i++)); do
         for ((j=0; j<width; j++)); do
@@ -44,7 +44,7 @@ init_game() {
 }
 
 move_and_draw() {
-    echo -ne "\E[${1};${2}H$3" 
+    echo -ne "\e[${1};${2}H$3"
 }
 
 # print everything in the buffer
@@ -238,7 +238,7 @@ game_loop() {
 
 clear_game() {
     stty echo
-    echo -e "\033[?25h"
+    echo -e "\e[?25h"
 }
 
 init_game
