@@ -1,3 +1,5 @@
+[![Run on Repl.it](https://repl.it/badge/github/pjhades/bash-snake)](https://repl.it/github/pjhades/bash-snake)
+
 About
 ---------------
 A simple snake game written in Bash.
