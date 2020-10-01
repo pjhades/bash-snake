@@ -1,3 +1,4 @@
+                               ***snake game****
 About
 ---------------
 A simple snake game written in Bash.
